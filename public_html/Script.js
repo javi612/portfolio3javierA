@@ -7,5 +7,8 @@
 
 $("document").ready(function(){
     $(".practice").css("background-color", "blue");
-            
+      
+    $("div:nth-child(1)").css("background-color", "pink");
+    
+    $("div p:last-child").css("background-color", "cyan")
 });
