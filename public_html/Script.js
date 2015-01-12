@@ -17,10 +17,23 @@ $('document').ready(function(){
     $('div').bind('mouseover', mouseOverMe());
     
     $('h1').bind('click', mouseClick);
+    
+    $('#replaceWHtml').bind('click', replaceWHtml);
+    $('#replaceWText').bind('click', replaceWText);
+    $('#addAPara').bind('click', addAPara);
+    $('#removeAPara').bind('click', removeAPara);
+    
 });
+function replaceWText(){
+    $('#h3Tag').html('<h6>Now I\'m an h6</h6>');
+}
+
+function replaceWHtml(){
+    $('#h3Tag').html('<h6>Now I\'m an h6</h6>');
+}
 
 function mouseOverMe(){
-    $("p").html("hairline");
+    $("p").html("a");
 }
 
 function mouseOutMe(){
