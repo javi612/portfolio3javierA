@@ -8,26 +8,38 @@
 $('document').ready(function(){
     $(".yeah").css("background-color", "blue");
       
-    //$("div:nth-child(1)").css("background-color", "pink");
+    $("div:nth-child(1)").css("background-color", "pink");
     
-    //$("div p:last-child").css("background-color", "cyan");
+    $("div p:last-child").css("background-color", "cyan");
     
     $("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
     
     $('div').bind('mouseover', mouseOverMe());
     
- //   $('h1').bind('click', mouseClick);
+    $('h1').bind('click', mouseClick);
     
-//    $('#replaceWHtml').bind('click', replaceWHtml);
+    $('#replaceWHtml').bind('click', replaceWHtml);
+    
     $('#replaceWText').bind('click', replaceWText);
-   $('#addAPara').bind('click', addAPara);
+    
+    $('#addAPara').bind('click', addAPara);
+    
     $('#removeAPara').bind('click', removeAPara);
-//    $('#lastIsFirst').bind('click', lastIsFirst);
-//    $('#addBefore').bind('click', addBefore);
-//    $('#addAfter').bind('click', addAfter);
-   // $('#addToTextBox').bind('click', lasstIsFirst);
+    
+    $('#lastIsFirst').bind('click', lastIsFirst);
+    
+    $('#addBefore').bind('click', addBefore);
+    
+    $('#addAfter').bind('click', addAfter);
+    
+    $('#addToTextBox').bind('click', lastIsFirst);
     
 });
+function showThePage(){
+    $('#div').show('fold', {}, 2500);
+    $('#show').hide('puff', {}, 2500);
+}
+
 function addToTextBox (){
     $('#randText').val('Random Text');
 }
@@ -41,6 +53,10 @@ function addBefore(){
 
 function lastIsFirst(){
     $('#randAPara p:last').append($('#randPara p:first'));
+}
+
+function removeAPara(){
+    $('#randAPara').append('<p>Another paragraph</p>');
 }
 
 function addAPara(){
